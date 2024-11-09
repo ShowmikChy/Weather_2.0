@@ -5,7 +5,7 @@ import math
 
 # Create your views here.
 def index(request):
-    return render(request, "weather_app/index.html")
+    return render(request, "index.html")
 
 def result(request):
     if request.method == "POST":
@@ -67,7 +67,7 @@ def result(request):
             "city_name":"Not Found, Check your spelling..."
         }
 
-        return render(request, "weather_app/results.html", context)
+        return render(request, "results.html", context)
     else:
     	return redirect('home')
 
